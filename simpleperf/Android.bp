@@ -318,6 +318,10 @@ cc_library {
     host_supported: false,
     static_libs: ["libsimpleperf"],
     shared_libs: ["libLLVM_android"],
+
+    lto: {
+        never: true,
+    },
 }
 
 rust_bindgen {
